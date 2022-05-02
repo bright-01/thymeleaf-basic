@@ -51,7 +51,7 @@ public class BasicController {
     }
 
     @Data
-    static class User{
+    static class User {
         private String username;
         private int age;
 
@@ -79,5 +79,12 @@ public class BasicController {
     public String date(Model model) {
         model.addAttribute("localDateTime", LocalDateTime.now());
         return "basic/date";
+    }
+
+    @GetMapping("/link")
+    public String link(Model model) {
+        model.addAttribute("param1", "data1");
+        model.addAttribute("param2", "data2");
+        return "basic/link";
     }
 }
