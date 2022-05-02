@@ -14,4 +14,10 @@ public class BasicController {
         model.addAttribute("data", "HELLO SPRING!!");
         return "basic/text-basic";
     }
+
+    @GetMapping("/text-unescaped")
+    public String textUnescaped(Model model) {
+        model.addAttribute("data", "HELLO SPRING!!");
+        return "basic/text-unescaped";
+    }
 }
